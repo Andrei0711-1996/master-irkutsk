@@ -11,7 +11,6 @@
     <meta property="og:url" content="https://ваш-сайт.ru/">
     <link rel="canonical" href="https://ваш-сайт.ru/">
 
-    <!-- JSON-LD микроразметка -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -120,9 +119,9 @@
         .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 5px; z-index: 1001; }
         .burger span { width: 25px; height: 3px; background: #fff; border-radius: 3px; transition: 0.3s; }
         .header-contacts { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-        .header-phone a, .header-email a, .header-telegram a { text-decoration: none; font-weight: 600; transition: 0.3s; display: flex; align-items: center; gap: 6px; color: #fff; font-size: 0.95rem; }
-        .header-phone a i, .header-email a i, .header-telegram a i { font-size: 1.2rem; color: #ffe484; }
-        .header-phone a:hover, .header-email a:hover, .header-telegram a:hover { color: #ffe484; }
+        .header-phone a, .header-email a { text-decoration: none; font-weight: 600; transition: 0.3s; display: flex; align-items: center; gap: 6px; color: #fff; font-size: 0.95rem; }
+        .header-phone a i, .header-email a i { font-size: 1.2rem; color: #ffe484; }
+        .header-phone a:hover, .header-email a:hover { color: #ffe484; }
 
         .hero { padding: 60px 0; display: flex; align-items: center; flex-wrap: wrap; }
         .hero-content { flex: 1; min-width: 260px; }
@@ -386,7 +385,7 @@
         .popup-content h2 { margin-bottom: 10px; }
         .popup-content p { margin-bottom: 20px; color: rgba(255,255,255,0.8); }
 
-        /* Плавающие мессенджеры (слева) */
+        /* Плавающие мессенджеры (только WhatsApp) */
         .floating-messengers {
             position: fixed;
             left: 20px;
@@ -413,7 +412,6 @@
         }
         .floating-messengers a:hover { transform: scale(1.1); }
         .floating-messengers a.wa:hover { background: #25d366; border-color: #25d366; }
-        .floating-messengers a.tg:hover { background: #27a7e7; border-color: #27a7e7; }
 
         /* Кнопка наверх */
         .back-to-top {
@@ -630,16 +628,13 @@
 
         footer { text-align: center; padding: 25px; color: rgba(255,255,255,0.7); border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem; }
 
-        /* ===== ЧАТ-ВИДЖЕТ УДАЛЁН ===== */
-        /* Стили для .chat-widget, .chat-button, .chat-window удалены */
-
         /* Мобильная версия */
         @media (max-width: 768px) {
             .container { padding: 0 15px; }
             .header-inner { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; }
             .burger { display: flex; }
             
-            .header-email, .header-telegram { display: none; }
+            .header-email { display: none; }
             .header-phone {
                 order: 2;
                 margin-left: auto;
@@ -728,7 +723,6 @@
             </nav>
             <div class="header-contacts">
                 <div class="header-phone"><a href="tel:+79027678881"><i class="ri-smartphone-line"></i> 8 (902) 767-88-81</a></div>
-                <div class="header-telegram"><a href="https://t.me/ataman1500" target="_blank"><i class="ri-telegram-line"></i> Telegram</a></div>
                 <div class="header-email"><a href="mailto:master-irkutsk38@yandex.ru"><i class="ri-mail-send-line"></i> master-irkutsk38@yandex.ru</a></div>
             </div>
         </div>
@@ -875,7 +869,7 @@
             </div>
         </section>
 
-        <!-- Галерея с вашими фото -->
+        <!-- Галерея -->
         <section id="gallery" class="gallery-section" data-aos="fade-up">
             <div class="text-center">
                 <p class="section-subtitle">Наши работы</p>
@@ -1042,13 +1036,11 @@
                 </div>
                 <button type="submit" class="btn btn-primary submit-btn" style="width: 100%;">Отправить заявку</button>
             </form>
-            <div id="order-success">✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>
 
             <a href="tel:+79027678881" class="big-phone">8 (902) 767-88-81</a>
             <a href="mailto:master-irkutsk38@yandex.ru" class="email-link">master-irkutsk38@yandex.ru</a>
             <div style="display: flex; gap: 15px; justify-content: center; margin-top: 25px; flex-wrap: wrap;">
                 <a href="tel:+79027678881" class="btn btn-primary"><i class="ri-phone-line"></i> Позвонить</a>
-                <a href="https://t.me/ataman1500" target="_blank" class="btn btn-outline"><i class="ri-telegram-line"></i> Telegram</a>
                 <a href="mailto:master-irkutsk38@yandex.ru" class="btn btn-outline"><i class="ri-mail-send-line"></i> Написать</a>
             </div>
         </section>
@@ -1081,10 +1073,9 @@
         </div>
     </div>
 
-    <!-- Плавающие мессенджеры -->
+    <!-- Плавающие мессенджеры (только WhatsApp) -->
     <div class="floating-messengers">
         <a href="https://wa.me/79027678881" target="_blank" class="wa" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
-        <a href="https://t.me/ataman1500" target="_blank" class="tg" title="Telegram"><i class="ri-telegram-line"></i></a>
     </div>
 
     <!-- Кнопка наверх -->
@@ -1094,6 +1085,23 @@
     <div class="fixed-order-btn">
         <a href="#contacts"><i class="ri-phone-line"></i> Заказать звонок</a>
     </div>
+
+    <!-- ===== ЧАТ TALK-ME (ВАШ КОД) ===== -->
+    <!-- Begin Talk-Me {literal} -->
+    <script>
+    (function(){(function c(d,w,m,i) {
+        window.supportAPIMethod = m;
+        var s = d.createElement('script');
+        s.id = 'supportScript'; 
+        s.async = true;
+        var id = '0b3ed243b33812a569aea2221bc96e46';
+        s.src = (!i ? 'https://lcab.talk-me.ru/support/support.js' : 'https://static.site-chat.me/support/support.int.js') + '?h=' + id;
+        s.onerror = i ? undefined : function(){c(d,w,m,true)};
+        w[m] = w[m] ? w[m] : function(){(w[m].q = w[m].q ? w[m].q : []).push(arguments);};
+        (d.head ? d.head : d.body).appendChild(s);
+    })(document,window,'TalkMe')})();
+    </script>
+    <!-- {/literal} End Talk-Me -->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -1148,18 +1156,14 @@
             });
         });
 
-        // ===== ЧАТ-ВИДЖЕТ УДАЛЁН =====
-        // Удалены все обработчики для chatToggle, chatWindow, closeChat
-
         // Формы
         const forms = [
             { id: 'reviewForm', success: 'form-success' },
-            { id: 'orderForm', success: 'order-success' },
-            { id: 'popupForm', success: 'popup-success' }
+            { id: 'popupForm', success: 'popup-success' },
+            { id: 'orderForm', success: null }
         ];
         forms.forEach(({ id, success }) => {
             const form = document.getElementById(id);
-            const successDiv = document.getElementById(success);
             if (!form) return;
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
@@ -1171,8 +1175,13 @@
                         headers: { 'Accept': 'application/json' }
                     });
                     if (response.ok) {
-                        form.style.display = 'none';
-                        successDiv.style.display = 'block';
+                        if (success) {
+                            form.style.display = 'none';
+                            document.getElementById(success).style.display = 'block';
+                        } else {
+                            alert('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+                            form.reset();
+                        }
                     } else {
                         alert('Произошла ошибка. Попробуйте ещё раз или позвоните нам.');
                     }
