@@ -38,6 +38,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        /* ===== ОСНОВНЫЕ СТИЛИ (без WhatsApp-кнопок) ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -138,7 +139,6 @@
         .feature-item h3 { color: #fff; margin-bottom: 8px; font-size: 1.1rem; }
         .feature-item p { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
 
-        /* Услуги */
         .services-section { padding: 60px 0; }
         .service-category {
             background: rgba(255,255,255,0.08);
@@ -194,7 +194,6 @@
             flex-shrink: 0;
         }
 
-        /* Калькулятор */
         .calculator-section { padding: 60px 0; }
         .calc-form {
             max-width: 600px;
@@ -237,7 +236,6 @@
         }
         .calc-result span { color: #ffe484; }
 
-        /* Счётчик */
         .counter-section { padding: 40px 0; }
         .counter-grid {
             display: grid;
@@ -257,7 +255,6 @@
             margin-top: 5px;
         }
 
-        /* Галерея */
         .gallery-section { padding: 60px 0; }
         .gallery-grid {
             display: grid;
@@ -314,7 +311,6 @@
         }
         .lightbox-close:hover { transform: rotate(90deg); }
 
-        /* FAQ */
         .faq-section { padding: 60px 0; }
         .faq-list {
             max-width: 800px;
@@ -348,7 +344,6 @@
         }
         .faq-item.open .faq-answer { display: block; }
 
-        /* Попап */
         .popup-overlay {
             display: none;
             position: fixed;
@@ -385,35 +380,7 @@
         .popup-content h2 { margin-bottom: 10px; }
         .popup-content p { margin-bottom: 20px; color: rgba(255,255,255,0.8); }
 
-        /* Плавающие мессенджеры (только WhatsApp) */
-        .floating-messengers {
-            position: fixed;
-            left: 20px;
-            bottom: 100px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 9998;
-        }
-        .floating-messengers a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 1.8rem;
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        .floating-messengers a:hover { transform: scale(1.1); }
-        .floating-messengers a.wa:hover { background: #25d366; border-color: #25d366; }
-
-        /* Кнопка наверх */
+        /* ===== УДАЛЕНЫ ВСЕ СТИЛИ ДЛЯ ПЛАВАЮЩИХ КНОПОК WhatsApp ===== */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -438,7 +405,6 @@
         .back-to-top.visible { opacity: 1; visibility: visible; }
         .back-to-top:hover { transform: translateY(-5px); background: #fff; }
 
-        /* Фиксированная кнопка заказа (мобильные) */
         .fixed-order-btn {
             display: none;
             position: fixed;
@@ -466,14 +432,12 @@
         }
         .fixed-order-btn a:hover { background: #fff; }
 
-        /* Почему мы */
         .why-us { padding: 60px 0; margin: 40px 0; }
         .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
         .why-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 25px 20px; border: 1px solid rgba(255,255,255,0.2); text-align: center; transition: 0.3s; }
         .why-card:hover { background: rgba(255,255,255,0.2); transform: translateY(-5px); }
         .why-card i { font-size: 2.5rem; color: #ffe484; margin-bottom: 15px; }
 
-        /* Отзывы */
         .reviews { padding: 60px 0; }
         .reviews-grid {
             display: grid;
@@ -515,7 +479,6 @@
         .review-stars { color: #ffe484; margin-bottom: 10px; }
         .review-text { color: rgba(255,255,255,0.9); font-style: italic; }
 
-        /* Форма отзыва */
         .review-form-section { padding: 60px 0; }
         .review-form { background: rgba(255,255,255,0.1); backdrop-filter: blur(15px); border-radius: 24px; padding: 40px 30px; border: 1px solid rgba(255,255,255,0.25); max-width: 600px; margin: 0 auto; }
         .form-group { margin-bottom: 20px; }
@@ -546,7 +509,6 @@
         .submit-btn { width: 100%; margin-top: 15px; }
         #form-success, #calc-success { display: none; text-align: center; margin-top: 20px; color: #ffe484; font-weight: 600; }
 
-        /* Контакты */
         .contact-section {
             background: rgba(255,255,255,0.08);
             backdrop-filter: blur(30px);
@@ -571,7 +533,6 @@
         .email-link { font-size: 1.1rem; color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px dashed #ffe484; transition: 0.3s; word-break: break-all; }
         .email-link:hover { color: #ffe484; }
 
-        /* Карта */
         .map-section { padding: 0 0 50px 0; }
         .map-wrapper {
             position: relative;
@@ -591,7 +552,6 @@
             border: none;
         }
 
-        /* Поделиться */
         .share-section { padding: 30px 0 20px; }
         .share-buttons {
             display: flex;
@@ -628,12 +588,10 @@
 
         footer { text-align: center; padding: 25px; color: rgba(255,255,255,0.7); border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem; }
 
-        /* Мобильная версия */
         @media (max-width: 768px) {
             .container { padding: 0 15px; }
             .header-inner { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; }
             .burger { display: flex; }
-            
             .header-email { display: none; }
             .header-phone {
                 order: 2;
@@ -649,7 +607,6 @@
                 backdrop-filter: blur(5px);
             }
             .header-phone a i { font-size: 1.4rem; }
-
             .nav {
                 flex-basis: 100%;
                 order: 3;
@@ -664,7 +621,6 @@
             }
             .nav.active { display: flex; }
             .nav-links { flex-direction: column; gap: 15px; width: 100%; }
-            
             .hero-content h1 { font-size: 2.2rem; }
             .btn { padding: 12px 25px; font-size: 0.9rem; }
             .section-title { font-size: 1.9rem; }
@@ -677,19 +633,16 @@
             .service-category { padding: 20px; }
             .service-list { grid-template-columns: 1fr; }
             .reviews-grid { grid-template-columns: 1fr; }
-
             .map-wrapper iframe { height: 250px; }
             .share-btn { width: 50px; height: 50px; font-size: 1.6rem; }
             .share-buttons { gap: 15px; }
-
             .fixed-order-btn { display: block; }
-            .floating-messengers { left: 10px; bottom: 80px; }
-            .floating-messengers a { width: 44px; height: 44px; font-size: 1.5rem; }
             .calc-form { padding: 20px; }
             .counter-item .counter-number { font-size: 2.5rem; }
             .gallery-grid { grid-template-columns: 1fr 1fr; }
             .gallery-item img { height: 160px; }
             .popup-content { padding: 30px 20px; }
+            .back-to-top { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 1.6rem; }
         }
         @media (max-width: 400px) {
             .hero-content h1 { font-size: 1.9rem; }
@@ -729,7 +682,6 @@
     </header>
 
     <main class="container">
-        <!-- Герой -->
         <section id="home" class="hero">
             <div class="hero-content" data-aos="fade-right">
                 <div class="badge"><i class="ri-verified-badge-line"></i> Гарантия до 12 месяцев</div>
@@ -742,7 +694,6 @@
             </div>
         </section>
 
-        <!-- Преимущества -->
         <div class="features">
             <div class="feature-item" data-aos="zoom-in-up" data-aos-delay="100"><div class="feature-icon"><i class="ri-speed-up-line"></i></div><h3>Приезд от 30 минут</h3><p>По всему Иркутску</p></div>
             <div class="feature-item" data-aos="zoom-in-up" data-aos-delay="200"><div class="feature-icon"><i class="ri-tools-fill"></i></div><h3>Профессиональный инструмент</h3><p>Всё с собой</p></div>
@@ -750,7 +701,6 @@
             <div class="feature-item" data-aos="zoom-in-up" data-aos-delay="400"><div class="feature-icon"><i class="ri-user-star-line"></i></div><h3>Опытные мастера</h3><p>Вежливые, трезвые</p></div>
         </div>
 
-        <!-- Услуги -->
         <section id="services" class="services-section">
             <div class="text-center" data-aos="fade-up">
                 <p class="section-subtitle">Что мы умеем</p>
@@ -822,7 +772,6 @@
             </div>
         </section>
 
-        <!-- Калькулятор -->
         <section id="calculator" class="calculator-section" data-aos="fade-up">
             <div class="text-center">
                 <p class="section-subtitle">Узнайте цену сразу</p>
@@ -851,7 +800,6 @@
             </div>
         </section>
 
-        <!-- Счётчик -->
         <section id="counter" class="counter-section" data-aos="fade-up">
             <div class="counter-grid">
                 <div class="counter-item">
@@ -869,7 +817,6 @@
             </div>
         </section>
 
-        <!-- Галерея -->
         <section id="gallery" class="gallery-section" data-aos="fade-up">
             <div class="text-center">
                 <p class="section-subtitle">Наши работы</p>
@@ -908,7 +855,6 @@
             <img id="lightboxImg" src="" alt="Увеличенное фото">
         </div>
 
-        <!-- FAQ -->
         <section id="faq" class="faq-section" data-aos="fade-up">
             <div class="text-center">
                 <p class="section-subtitle">Ответы на вопросы</p>
@@ -953,7 +899,6 @@
             </div>
         </section>
 
-        <!-- Отзывы -->
         <section id="reviews" class="reviews">
             <div class="text-center" data-aos="fade-up"><p class="section-subtitle">Что говорят клиенты</p><h2 class="section-title">Отзывы</h2></div>
             <div class="reviews-grid">
@@ -966,7 +911,6 @@
             </div>
         </section>
 
-        <!-- Форма отзыва -->
         <section id="leave-review" class="review-form-section">
             <div class="text-center" data-aos="fade-up"><p class="section-subtitle">Поделитесь впечатлениями</p><h2 class="section-title">Оставить отзыв</h2></div>
             <div class="review-form" data-aos="zoom-in">
@@ -986,7 +930,6 @@
             </div>
         </section>
 
-        <!-- Карта -->
         <section id="map" class="map-section" data-aos="fade-up">
             <div class="text-center">
                 <p class="section-subtitle">Мы находимся здесь</p>
@@ -1000,7 +943,6 @@
             </div>
         </section>
 
-        <!-- Поделиться -->
         <section id="share" class="share-section" data-aos="fade-up">
             <div class="text-center">
                 <p class="section-subtitle">Расскажите о нас</p>
@@ -1015,7 +957,6 @@
             </div>
         </section>
 
-        <!-- Контакты -->
         <section id="contacts" class="contact-section" data-aos="zoom-in">
             <i class="ri-customer-service-2-fill" style="font-size: 3rem; color: #ffe484;"></i>
             <h2>Вызвать мастера сейчас</h2>
@@ -1073,11 +1014,7 @@
         </div>
     </div>
 
-    <!-- Плавающие мессенджеры (только WhatsApp) -->
-    <div class="floating-messengers">
-        <a href="https://wa.me/79027678881" target="_blank" class="wa" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
-    </div>
-
+    <!-- ===== КНОПКИ WHATSAPP УДАЛЕНЫ ===== -->
     <!-- Кнопка наверх -->
     <button class="back-to-top" id="backToTop" aria-label="Наверх"><i class="ri-arrow-up-line"></i></button>
 
@@ -1086,22 +1023,30 @@
         <a href="#contacts"><i class="ri-phone-line"></i> Заказать звонок</a>
     </div>
 
-    <!-- ===== ЧАТ TALK-ME (ВАШ КОД) ===== -->
-    <!-- Begin Talk-Me {literal} -->
+    <!-- ===== ЧАТ TALK-ME (исправленный, работает на ПК и мобильных) ===== -->
+    <!-- Begin Talk-Me -->
     <script>
-    (function(){(function c(d,w,m,i) {
-        window.supportAPIMethod = m;
-        var s = d.createElement('script');
-        s.id = 'supportScript'; 
+    (function() {
+        var talkMeId = '0b3ed243b33812a569aea2221bc96e46';
+        function initTalkMe() {
+            if (typeof TalkMe !== 'undefined') {
+                TalkMe('init', { id: talkMeId });
+                console.log('Talk-Me инициализирован успешно');
+            } else {
+                setTimeout(initTalkMe, 500);
+            }
+        }
+        var s = document.createElement('script');
         s.async = true;
-        var id = '0b3ed243b33812a569aea2221bc96e46';
-        s.src = (!i ? 'https://lcab.talk-me.ru/support/support.js' : 'https://static.site-chat.me/support/support.int.js') + '?h=' + id;
-        s.onerror = i ? undefined : function(){c(d,w,m,true)};
-        w[m] = w[m] ? w[m] : function(){(w[m].q = w[m].q ? w[m].q : []).push(arguments);};
-        (d.head ? d.head : d.body).appendChild(s);
-    })(document,window,'TalkMe')})();
+        s.src = 'https://lcab.talk-me.ru/support/support.js?h=' + talkMeId;
+        s.onload = initTalkMe;
+        s.onerror = function() {
+            console.warn('Ошибка загрузки Talk-Me, попробуйте обновить страницу');
+        };
+        document.head.appendChild(s);
+    })();
     </script>
-    <!-- {/literal} End Talk-Me -->
+    <!-- End Talk-Me -->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -1314,6 +1259,7 @@
         });
 
         console.log('✅ Все функции загружены! Сайт готов к работе.');
+        console.log('💬 Чат Talk-Me активирован.');
     </script>
 </body>
 </html>
