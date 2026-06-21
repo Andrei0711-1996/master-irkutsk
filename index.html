@@ -38,7 +38,6 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        /* ===== ОСНОВНЫЕ СТИЛИ (без WhatsApp-кнопок) ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -194,47 +193,7 @@
             flex-shrink: 0;
         }
 
-        .calculator-section { padding: 60px 0; }
-        .calc-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(16px);
-            padding: 30px;
-            border-radius: 30px;
-            border: 1px solid rgba(255,255,255,0.15);
-        }
-        .calc-form .form-group { margin-bottom: 20px; }
-        .calc-form label { display: block; margin-bottom: 8px; font-weight: 500; }
-        .calc-form select, .calc-form input[type="number"] {
-            width: 100%;
-            padding: 14px 18px;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.25);
-            background: rgba(255,255,255,0.08);
-            color: #fff;
-            font-size: 1rem;
-            transition: 0.3s;
-            appearance: none;
-            -webkit-appearance: none;
-        }
-        .calc-form select option { color: #333; background: #fff; }
-        .calc-form select:focus, .calc-form input:focus {
-            outline: none;
-            border-color: #ffe484;
-            background: rgba(255,255,255,0.15);
-        }
-        .calc-result {
-            margin-top: 20px;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.6rem;
-            font-weight: 700;
-            background: rgba(255,255,255,0.1);
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        .calc-result span { color: #ffe484; }
+        /* ===== КАЛЬКУЛЯТОР УДАЛЁН ===== */
 
         .counter-section { padding: 40px 0; }
         .counter-grid {
@@ -380,7 +339,6 @@
         .popup-content h2 { margin-bottom: 10px; }
         .popup-content p { margin-bottom: 20px; color: rgba(255,255,255,0.8); }
 
-        /* ===== УДАЛЕНЫ ВСЕ СТИЛИ ДЛЯ ПЛАВАЮЩИХ КНОПОК WhatsApp ===== */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -404,33 +362,6 @@
         }
         .back-to-top.visible { opacity: 1; visibility: visible; }
         .back-to-top:hover { transform: translateY(-5px); background: #fff; }
-
-        .fixed-order-btn {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 12px 20px;
-            background: rgba(118, 75, 162, 0.95);
-            backdrop-filter: blur(10px);
-            text-align: center;
-            z-index: 9997;
-            border-top: 1px solid rgba(255,255,255,0.15);
-        }
-        .fixed-order-btn a {
-            display: inline-block;
-            width: 100%;
-            max-width: 300px;
-            padding: 14px;
-            border-radius: 50px;
-            background: #ffe484;
-            color: #764ba2;
-            font-weight: 700;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .fixed-order-btn a:hover { background: #fff; }
 
         .why-us { padding: 60px 0; margin: 40px 0; }
         .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
@@ -507,7 +438,7 @@
         .stars label { font-size: 1.8rem; color: rgba(255,255,255,0.3); cursor: pointer; transition: color 0.2s; }
         .stars input:checked ~ label, .stars label:hover, .stars label:hover ~ label { color: #ffe484; }
         .submit-btn { width: 100%; margin-top: 15px; }
-        #form-success, #calc-success { display: none; text-align: center; margin-top: 20px; color: #ffe484; font-weight: 600; }
+        #form-success { display: none; text-align: center; margin-top: 20px; color: #ffe484; font-weight: 600; }
 
         .contact-section {
             background: rgba(255,255,255,0.08);
@@ -636,8 +567,6 @@
             .map-wrapper iframe { height: 250px; }
             .share-btn { width: 50px; height: 50px; font-size: 1.6rem; }
             .share-buttons { gap: 15px; }
-            .fixed-order-btn { display: block; }
-            .calc-form { padding: 20px; }
             .counter-item .counter-number { font-size: 2.5rem; }
             .gallery-grid { grid-template-columns: 1fr 1fr; }
             .gallery-item img { height: 160px; }
@@ -667,7 +596,7 @@
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Главная</a></li>
                     <li><a href="#services">Услуги</a></li>
-                    <li><a href="#calculator">Калькулятор</a></li>
+                    <!-- пункт "Калькулятор" удалён -->
                     <li><a href="#gallery">Галерея</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#reviews">Отзывы</a></li>
@@ -688,7 +617,7 @@
                 <h1>Муж на час, Электрик, Сантехник в Иркутске</h1>
                 <p>Ежедневно сталкиваясь с мелкими бытовыми проблемами, зачастую доверить дело профессионалам бывает быстрее и дешевле. У мастера всегда в наличии все необходимые инструменты, а самое главное — это знание и опыт.</p>
                 <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                    <a href="#calculator" class="btn btn-primary">Рассчитать стоимость</a>
+                    <a href="#services" class="btn btn-primary">Смотреть услуги</a>
                     <a href="tel:+79027678881" class="btn btn-outline pulse"><i class="ri-phone-line"></i> Экстренный вызов</a>
                 </div>
             </div>
@@ -772,33 +701,7 @@
             </div>
         </section>
 
-        <section id="calculator" class="calculator-section" data-aos="fade-up">
-            <div class="text-center">
-                <p class="section-subtitle">Узнайте цену сразу</p>
-                <h2 class="section-title">Калькулятор стоимости</h2>
-            </div>
-            <div class="calc-form">
-                <form id="calcForm">
-                    <div class="form-group">
-                        <label for="calcService">Выберите услугу</label>
-                        <select id="calcService" required>
-                            <option value="electric">Электрика</option>
-                            <option value="plumbing">Сантехника</option>
-                            <option value="furniture">Сборка мебели</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="calcVolume">Объём работ (кол-во точек/изделий)</label>
-                        <input type="number" id="calcVolume" value="1" min="1" max="20" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary submit-btn">Рассчитать</button>
-                </form>
-                <div class="calc-result" id="calcResult" style="display: none;">
-                    Примерная стоимость: <span id="calcPrice">0</span> ₽
-                </div>
-                <div id="calc-success">Спасибо, мы скоро свяжемся с вами для уточнения!</div>
-            </div>
-        </section>
+        <!-- ===== СЕКЦИЯ КАЛЬКУЛЯТОРА УДАЛЕНА ===== -->
 
         <section id="counter" class="counter-section" data-aos="fade-up">
             <div class="counter-grid">
@@ -1014,39 +917,8 @@
         </div>
     </div>
 
-    <!-- ===== КНОПКИ WHATSAPP УДАЛЕНЫ ===== -->
     <!-- Кнопка наверх -->
     <button class="back-to-top" id="backToTop" aria-label="Наверх"><i class="ri-arrow-up-line"></i></button>
-
-    <!-- Фиксированная кнопка заказа -->
-    <div class="fixed-order-btn">
-        <a href="#contacts"><i class="ri-phone-line"></i> Заказать звонок</a>
-    </div>
-
-    <!-- ===== ЧАТ TALK-ME (исправленный, работает на ПК и мобильных) ===== -->
-    <!-- Begin Talk-Me -->
-    <script>
-    (function() {
-        var talkMeId = '0b3ed243b33812a569aea2221bc96e46';
-        function initTalkMe() {
-            if (typeof TalkMe !== 'undefined') {
-                TalkMe('init', { id: talkMeId });
-                console.log('Talk-Me инициализирован успешно');
-            } else {
-                setTimeout(initTalkMe, 500);
-            }
-        }
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://lcab.talk-me.ru/support/support.js?h=' + talkMeId;
-        s.onload = initTalkMe;
-        s.onerror = function() {
-            console.warn('Ошибка загрузки Talk-Me, попробуйте обновить страницу');
-        };
-        document.head.appendChild(s);
-    })();
-    </script>
-    <!-- End Talk-Me -->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -1134,21 +1006,6 @@
                     alert('Ошибка сети. Проверьте подключение.');
                 }
             });
-        });
-
-        // Калькулятор
-        const calcForm = document.getElementById('calcForm');
-        const calcResult = document.getElementById('calcResult');
-        const calcPrice = document.getElementById('calcPrice');
-        const prices = { electric: 500, plumbing: 600, furniture: 700 };
-        calcForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const service = document.getElementById('calcService').value;
-            const volume = parseInt(document.getElementById('calcVolume').value) || 1;
-            const base = prices[service] || 0;
-            const total = base * volume;
-            calcPrice.textContent = total;
-            calcResult.style.display = 'block';
         });
 
         // Галерея
@@ -1259,7 +1116,7 @@
         });
 
         console.log('✅ Все функции загружены! Сайт готов к работе.');
-        console.log('💬 Чат Talk-Me активирован.');
+        console.log('💬 Калькулятор, Talk-Me и кнопка заказа звонка удалены.');
     </script>
 </body>
 </html>
