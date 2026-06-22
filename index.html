@@ -8,15 +8,15 @@
     <meta property="og:title" content="Муж на час, Электрик, Сантехник в Иркутске">
     <meta property="og:description" content="Быстрый выезд, опытные мастера, доступные цены. Все работы под ключ.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ваш-сайт.ru/">
-    <link rel="canonical" href="https://ваш-сайт.ru/">
+    <meta property="og:url" content="https://master-irkutsk.ru/">
+    <link rel="canonical" href="https://master-irkutsk.ru/">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Мастер+",
-        "image": "https://ваш-сайт.ru/logo.png",
+        "image": "https://master-irkutsk.ru/logo.png",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Иркутск",
@@ -514,10 +514,150 @@
         .share-btn.vk:hover { background: #4a76a8; border-color: #4a76a8; }
         .share-btn.tg:hover { background: #27a7e7; border-color: #27a7e7; }
         .share-btn.wa:hover { background: #25d366; border-color: #25d366; }
-        .share-btn.max:hover { background: #ff6b6b; border-color: #ff6b6b; }
         .share-btn.ig:hover { background: #e4405f; border-color: #e4405f; }
 
         footer { text-align: center; padding: 25px; color: rgba(255,255,255,0.7); border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem; }
+
+        /* ===== Стили для раздела вакансий ===== */
+        .vacancies-section {
+            padding: 60px 0;
+        }
+        .vacancies-block {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 32px;
+            padding: 40px 35px;
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: all 0.4s ease;
+        }
+        .vacancies-block h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .vacancies-block .subhead {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 30px;
+            font-weight: 400;
+            border-left: 4px solid #ffe484;
+            padding-left: 18px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 0 12px 12px 0;
+        }
+        .vacancies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 40px;
+            margin-top: 20px;
+        }
+        @media (max-width: 700px) {
+            .vacancies-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        .vacancies-grid .block {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 20px 25px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .vacancies-grid .block h3 {
+            font-size: 1.3rem;
+            color: #ffe484;
+            margin-bottom: 12px;
+        }
+        .vacancies-grid .block ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .vacancies-grid .block ul li {
+            padding: 6px 0 6px 28px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23ffe484" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>') left center no-repeat;
+            background-size: 18px;
+            color: rgba(255,255,255,0.95);
+        }
+        .vacancies-perks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px;
+            margin: 20px 0 10px;
+            background: rgba(255,255,255,0.04);
+            padding: 20px 24px;
+            border-radius: 20px;
+        }
+        @media (max-width: 500px) {
+            .vacancies-perks {
+                grid-template-columns: 1fr;
+                padding: 16px 18px;
+            }
+        }
+        .vacancies-perks .perk-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+        .vacancies-perks .perk-item .emoji {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            min-width: 26px;
+        }
+        .vacancies-perks .perk-item strong {
+            font-weight: 600;
+        }
+        .vacancies-contact {
+            margin-top: 30px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 20px;
+            padding: 24px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .vacancies-contact .phone {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .vacancies-contact .phone i {
+            color: #ffe484;
+        }
+        .vacancies-contact .site {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ffe484;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.15s;
+        }
+        .vacancies-contact .site:hover {
+            border-bottom-color: #ffe484;
+        }
+        .vacancies-contact .btn {
+            margin: 5px 0;
+        }
+        @media (max-width: 600px) {
+            .vacancies-contact {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            .vacancies-contact .phone {
+                font-size: 1.3rem;
+            }
+        }
 
         @media (max-width: 768px) {
             .container { padding: 0 15px; }
@@ -572,6 +712,7 @@
             .gallery-item img { height: 160px; }
             .popup-content { padding: 30px 20px; }
             .back-to-top { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 1.6rem; }
+            .vacancies-block { padding: 30px 20px; }
         }
         @media (max-width: 400px) {
             .hero-content h1 { font-size: 1.9rem; }
@@ -582,6 +723,10 @@
             .map-wrapper iframe { height: 200px; }
             .gallery-grid { grid-template-columns: 1fr; }
             .header-phone a { font-size: 1rem; padding: 4px 10px; }
+            .vacancies-perks {
+                grid-template-columns: 1fr;
+                padding: 12px;
+            }
         }
     </style>
 </head>
@@ -596,10 +741,10 @@
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Главная</a></li>
                     <li><a href="#services">Услуги</a></li>
-                    <!-- пункт "Калькулятор" удалён -->
                     <li><a href="#gallery">Галерея</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#vacancies">Вакансии</a></li>   <!-- ДОБАВЛЕНО -->
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
@@ -694,14 +839,11 @@
                         <li><i class="ri-check-line"></i> Сборка корпусной мебели</li>
                         <li><i class="ri-check-line"></i> Сборка встроенной мебели</li>
                         <li><i class="ri-check-line"></i> Сборка мягкой мебели</li>
-                        <li><i class="ri-check-line"></i> Сборка офисной мебели</li>
                         <li><i class="ri-check-line"></i> Сборка производственной мебели (стеллажи, шкафы)</li>
                     </ul>
                 </div>
             </div>
         </section>
-
-        <!-- ===== СЕКЦИЯ КАЛЬКУЛЯТОРА УДАЛЕНА ===== -->
 
         <section id="counter" class="counter-section" data-aos="fade-up">
             <div class="counter-grid">
@@ -814,6 +956,67 @@
             </div>
         </section>
 
+        <!-- ===== НОВЫЙ РАЗДЕЛ ВАКАНСИЙ ===== -->
+        <section id="vacancies" class="vacancies-section" data-aos="fade-up">
+            <div class="text-center">
+                <p class="section-subtitle">Присоединяйтесь к команде</p>
+                <h2 class="section-title">Вакансии</h2>
+            </div>
+            <div class="vacancies-block">
+                <h2>Работа в службе «Муж на час» — Иркутск</h2>
+                <div class="subhead">Ежедневные выплаты · Стабильные заказы · Удобный график</div>
+
+                <div class="vacancies-grid">
+                    <div class="block">
+                        <h3>Кого мы ищем</h3>
+                        <p style="color: rgba(255,255,255,0.9); margin-bottom: 12px;">В нашу команду требуются <strong>сантехники, электрики и мастера-универсалы</strong> для выполнения мелкого бытового ремонта у частных лиц и организаций. Заказов много — нужны надёжные руки, которые готовы работать и зарабатывать.</p>
+                        <p style="color: rgba(255,255,255,0.9);">Мы приглашаем как опытных специалистов, так и кандидатов без опыта — главное, чтобы вы разбирались в сантехнике или электрике и хотели работать.</p>
+                    </div>
+                    <div class="block">
+                        <h3>Ваши обязанности</h3>
+                        <ul>
+                            <li>Выполнение бытового ремонта по электрике и сантехнике</li>
+                            <li>Замена сифонов, ремонт и замена розеток, монтаж осветительных приборов</li>
+                            <li>Мелкий ремонт и настройка оборудования</li>
+                        </ul>
+                    </div>
+                    <div class="block" style="grid-column: 1 / -1;">
+                        <h3>Наши требования</h3>
+                        <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px;">
+                            <li>Опыт работы от 1 года (для начинающих — готовы рассмотреть без опыта)</li>
+                            <li>Понимание основ сантехники и/или электрики</li>
+                            <li>Готовность к работе с полной отдачей и желание зарабатывать</li>
+                            <li>Рассматриваем кандидатов старше 45 лет</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vacancies-perks">
+                    <div class="perk-item"><span class="emoji">✅</span> <div><strong>Ежедневные выплаты</strong> — оплата сразу после заказа, деньги каждый день.</div></div>
+                    <div class="perk-item"><span class="emoji">💰</span> <div><strong>Высокий доход</strong> — от 5 000 до 6 000+ ₽ за смену. Доход зависит от активности.</div></div>
+                    <div class="perk-item"><span class="emoji">📈</span> <div><strong>Стабильная загрузка</strong> — в день 3–5 заказов с разъездами по городу. Работа есть всегда.</div></div>
+                    <div class="perk-item"><span class="emoji">📅</span> <div><strong>Гибкий график</strong> — выбирайте 5/2, 2/2, 3/3 или хоть каждый день.</div></div>
+                    <div class="perk-item"><span class="emoji">🎓</span> <div><strong>Поддержка и обучение</strong> — обучение, скидки, зоны отдыха и парковка.</div></div>
+                    <div class="perk-item"><span class="emoji">🏠</span> <div><strong>Работа в помещениях</strong> — все заказы выполняются внутри объектов.</div></div>
+                </div>
+
+                <div class="vacancies-contact">
+                    <div>
+                        <div style="font-weight: 600; color: #ffe484; margin-bottom: 6px;">Как откликнуться</div>
+                        <a href="tel:+79027678881" class="phone"><i class="ri-phone-line"></i> +7 (902) 767-88-81</a>
+                        <div style="margin-top: 6px;">
+                            <a href="https://master-irkutsk.ru" target="_blank" class="site">master-irkutsk.ru</a>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="tel:+79027678881" class="btn btn-primary"><i class="ri-phone-line"></i> Позвонить</a>
+                        <a href="#contacts" class="btn btn-outline"><i class="ri-mail-send-line"></i> Оставить заявку</a>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; color: rgba(255,255,255,0.7); font-size: 0.95rem; text-align: center;">Звоните, оставляйте отклики — мы всё расскажем и ответим на все вопросы</p>
+            </div>
+        </section>
+
         <section id="leave-review" class="review-form-section">
             <div class="text-center" data-aos="fade-up"><p class="section-subtitle">Поделитесь впечатлениями</p><h2 class="section-title">Оставить отзыв</h2></div>
             <div class="review-form" data-aos="zoom-in">
@@ -855,7 +1058,6 @@
                 <a href="#" class="share-btn vk" data-share="vk" title="ВКонтакте"><i class="ri-vk-line"></i></a>
                 <a href="#" class="share-btn tg" data-share="tg" title="Telegram"><i class="ri-telegram-line"></i></a>
                 <a href="#" class="share-btn wa" data-share="wa" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
-                <a href="#" class="share-btn max" data-share="max" title="Max.ru"><i class="ri-global-line"></i></a>
                 <a href="#" class="share-btn ig" data-share="instagram" title="Instagram"><i class="ri-instagram-line"></i></a>
             </div>
         </section>
@@ -880,6 +1082,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary submit-btn" style="width: 100%;">Отправить заявку</button>
             </form>
+            <div id="order-success" style="display: none; text-align: center; margin-top: 20px; color: #ffe484; font-weight: 600;">✅ Заявка отправлена! Мы свяжемся с вами.</div>
 
             <a href="tel:+79027678881" class="big-phone">8 (902) 767-88-81</a>
             <a href="mailto:master-irkutsk38@yandex.ru" class="email-link">master-irkutsk38@yandex.ru</a>
@@ -977,7 +1180,7 @@
         const forms = [
             { id: 'reviewForm', success: 'form-success' },
             { id: 'popupForm', success: 'popup-success' },
-            { id: 'orderForm', success: null }
+            { id: 'orderForm', success: 'order-success' }
         ];
         forms.forEach(({ id, success }) => {
             const form = document.getElementById(id);
@@ -1041,10 +1244,16 @@
                     const interval = setInterval(() => {
                         current += step;
                         if (current >= target) {
-                            counter.textContent = target + (target === 120 ? '+' : '');
+                            let suffix = '';
+                            if (target === 120) suffix = '+';
+                            else if (target === 100) suffix = '%';
+                            counter.textContent = target + suffix;
                             clearInterval(interval);
                         } else {
-                            counter.textContent = current + (target === 120 ? '+' : '');
+                            let suffix = '';
+                            if (target === 120) suffix = '+';
+                            else if (target === 100) suffix = '%';
+                            counter.textContent = current + suffix;
                         }
                     }, 30);
                 });
@@ -1092,11 +1301,8 @@
                     case 'wa':
                         shareUrl = `https://api.whatsapp.com/send?text=${currentTitle} ${currentUrl}`;
                         break;
-                    case 'max':
-                        window.open('https://max.ru', '_blank');
-                        return;
                     case 'instagram':
-                        window.open('https://instagram.com/ваш_аккаунт', '_blank');
+                        window.open('https://instagram.com/master_irkutsk38', '_blank');
                         return;
                     default: return;
                 }
@@ -1110,13 +1316,25 @@
         setTimeout(() => {
             popupOverlay.classList.add('open');
         }, 60000);
-        popupClose.addEventListener('click', () => popupOverlay.classList.remove('open'));
-        popupOverlay.addEventListener('click', (e) => {
-            if (e.target === popupOverlay) popupOverlay.classList.remove('open');
-        });
+        
+        function resetPopup() {
+            const popupForm = document.getElementById('popupForm');
+            const popupSuccess = document.getElementById('popup-success');
+            popupForm.style.display = 'block';
+            popupSuccess.style.display = 'none';
+            popupForm.reset();
+        }
 
-        console.log('✅ Все функции загружены! Сайт готов к работе.');
-        console.log('💬 Калькулятор, Talk-Me и кнопка заказа звонка удалены.');
+        popupClose.addEventListener('click', () => {
+            popupOverlay.classList.remove('open');
+            resetPopup();
+        });
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove('open');
+                resetPopup();
+            }
+        });
     </script>
 </body>
 </html>
